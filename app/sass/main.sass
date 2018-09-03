@@ -1,0 +1,41 @@
+$blue: #0499ff
+$grey: #3c3c3c
+$light_grey: #9b9b9b
+
+$columns: 25
+$offset: 1vw
+$atom: (100vw / $columns)
+
+body
+    margin: 0
+    background: #f5f5f5
+    font-family: sans-serif
+
+.header
+    display: flex
+    align-items: center
+    width: 25 * $atom - 2*$offset
+    position: absolute
+    padding: $offset
+    justify-content: space-between
+
+.logo
+    &__element1
+        color: $blue
+        font-weight: bold
+    &__element2
+        color: $grey
+
+.menu-button
+    display: flex
+    align-items: center
+    &__text
+        margin-right: $offset
+    &__icon
+        background: $blue
+        height: 30px
+        width: 30px
+        float: right
+
+.header__menu-button
+    float: right

@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  background: #f5f5f5;
+  font-family: sans-serif; }
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 98vw;
+  position: absolute;
+  padding: 1vw;
+  justify-content: space-between; }
+
+.logo__element1 {
+  color: #0499ff;
+  font-weight: bold; }
+
+.logo__element2 {
+  color: #3c3c3c; }
+
+.menu-button {
+  display: flex;
+  align-items: center; }
+  .menu-button__text {
+    margin-right: 1vw; }
+  .menu-button__icon {
+    background: #0499ff;
+    height: 30px;
+    width: 30px;
+    float: right; }
+
+.header__menu-button {
+  float: right; }
