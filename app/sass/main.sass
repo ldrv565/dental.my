@@ -1,41 +1,141 @@
-$blue: #0499ff
+//<цвета>
+$blue: #0093fa
 $grey: #3c3c3c
 $light_grey: #9b9b9b
-
+//</цвета>
+//<сетка>
 $columns: 25
 $offset: 1vw
 $atom: (100vw / $columns)
-
+//</сетка>
+//<брейкпоинты>
+$big: "max-width: 1050px"
+$medium: 769px
+//</брейкпоинты>
+//<теги>
 body
     margin: 0
     background: #f5f5f5
     font-family: sans-serif
-
+//</теги>
+//<основные_части_сайта>
 .header
     display: flex
     align-items: center
-    width: 25 * $atom - 2*$offset
-    position: absolute
-    padding: $offset
+    width: $columns * $atom - $atom
+    padding: $atom / 2
     justify-content: space-between
-
+    &--absolute
+        position: absolute
+        &__logo
+            .logo__element1
+                text-shadow: 0px 0px 1px white
+.main
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    &--shift
+        @media ($big)
+            padding-top: 75px
+//</основные_части_сайта>
+//<глобальные_блоки>
+//  <логотип>
 .logo
     &__element1
         color: $blue
         font-weight: bold
+        font-size: 24px
     &__element2
         color: $grey
-
+        font-size: 24px
+//  </логотип>
+//  <кнопка_меню>
 .menu-button
     display: flex
     align-items: center
     &__text
         margin-right: $offset
+        color: $grey
     &__icon
         background: $blue
-        height: 30px
-        width: 30px
-        float: right
-
-.header__menu-button
-    float: right
+        width: 50px
+        height: 40px
+        &__sticks
+            display: block
+            width: 30px
+            height: 0px
+            margin: auto
+            background: white
+            content: ""
+            padding-top: 3px
+            margin-top: 7px
+            &::before
+                display: block
+                width: 30px
+                height: 3px
+                margin: 0 auto
+                margin-top: 7px
+                background: white
+                content: ""
+            &::after
+                display: block
+                width: 30px
+                height: 3px
+                margin: 0 auto
+                margin-top: 7px
+                background: white
+                content: ""
+//  </кнопка_меню>
+//  <контейнер_контента>
+.block
+    &__header
+        display: block
+        font-size: 32px
+        line-height: 40px
+        font-weight: bold
+        color: $grey
+        &--border
+            width: max-content
+            color: transparent
+            margin-top: -14px
+            height: 11px
+            background: $blue
+            margin-bottom: $atom/2
+    &__text
+        color: $light_grey
+        font-size: 12px
+        line-height: 16px
+    &__more
+        display: none
+        border-bottom: 1px
+        color: white
+        border-bottom: 1px solid
+        width: 45px
+        padding-bottom: 5px
+        margin-left: $offset
+        margin-top: $offset
+//  </контейнер_контента>
+//</основные_блоки>
+//<блоки_главной>
+.card
+    display: flex
+    align-items: flex-end
+    width: 5*$atom
+    padding: 0 $atom/2
+    height: 100vh
+    @media ($big)
+        height: min-content
+        width: auto
+        flex-basis: 100vw
+    &:hover
+        background: $blue
+        .card__block
+            .block__header, .block__text
+                color: white
+            .block__header--border
+                color: transparent
+            .block__more
+                display: block
+    &__block
+        padding-bottom: $atom
+//<блоки_главной>
