@@ -10,7 +10,8 @@ $atom: (100vw / $columns)
 //</сетка>
 //<брейкпоинты>
 $big: "max-width: 1050px"
-$medium: 769px
+$medium: "max-width: 768px"
+$small: "max-width: 480px"
 //</брейкпоинты>
 //<теги>
 body
@@ -30,6 +31,37 @@ body
         &__logo
             .logo__element1
                 text-shadow: 0px 0px 1px white
+
+.menu
+    position: absolute
+    width: 100vw
+    min-height: 100vh
+    background: white
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    font-weight: bold
+    &__header
+        flex-basis: 30vw
+        font-size: 36px
+        color: $blue
+    &__item
+        font-size: 28px
+        color: $grey
+        padding: $offset
+    &__border
+        width: 200px
+        padding: $offset
+        border-bottom: 1px solid $light_grey
+    &__social
+        display: flex
+        &__item
+            padding: $offset
+    &--shift
+        @media ($big)
+            padding-top: 75px
+
 .main
     display: flex
     justify-content: center
@@ -53,38 +85,50 @@ body
 .menu-button
     display: flex
     align-items: center
+    cursor: pointer
     &__text
         margin-right: $offset
         color: $grey
     &__icon
         background: $blue
         width: 50px
-        height: 40px
+        height: 45px
         &__sticks
-            display: block
             width: 30px
             height: 0px
             margin: auto
             background: white
             content: ""
             padding-top: 3px
-            margin-top: 7px
+            margin-top: 10px
             &::before
                 display: block
-                width: 30px
                 height: 3px
-                margin: 0 auto
-                margin-top: 7px
+                margin-top: 8px
                 background: white
                 content: ""
             &::after
                 display: block
-                width: 30px
                 height: 3px
-                margin: 0 auto
-                margin-top: 7px
+                margin-top: 8px
                 background: white
                 content: ""
+        &--closing
+            background: transparent
+            .menu-button__icon__sticks
+                background: transparent
+                &::before
+                    height: 2px
+                    transform: rotate(45deg)
+                    background: $grey
+                &::after
+                    margin-top: -2px
+                    height: 2px
+                    transform: rotate(-45deg)
+                    background: $grey
+
+        
+
 //  </кнопка_меню>
 //  <контейнер_контента>
 .block
@@ -115,7 +159,7 @@ body
         margin-left: $offset
         margin-top: $offset
 //  </контейнер_контента>
-//</основные_блоки>
+//</глобальные_блоки>
 //<блоки_главной>
 .card
     display: flex

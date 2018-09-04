@@ -14,6 +14,36 @@ body {
     .header--absolute__logo .logo__element1 {
       text-shadow: 0px 0px 1px white; }
 
+.menu {
+  position: absolute;
+  width: 100vw;
+  min-height: 100vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-weight: bold; }
+  .menu__header {
+    flex-basis: 30vw;
+    font-size: 36px;
+    color: #0093fa; }
+  .menu__item {
+    font-size: 28px;
+    color: #3c3c3c;
+    padding: 1vw; }
+  .menu__border {
+    width: 200px;
+    padding: 1vw;
+    border-bottom: 1px solid #9b9b9b; }
+  .menu__social {
+    display: flex; }
+    .menu__social__item {
+      padding: 1vw; }
+  @media (max-width: 1050px) {
+    .menu--shift {
+      padding-top: 75px; } }
+
 .main {
   display: flex;
   justify-content: center;
@@ -33,39 +63,48 @@ body {
 
 .menu-button {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  cursor: pointer; }
   .menu-button__text {
     margin-right: 1vw;
     color: #3c3c3c; }
   .menu-button__icon {
     background: #0093fa;
     width: 50px;
-    height: 40px; }
+    height: 45px; }
     .menu-button__icon__sticks {
-      display: block;
       width: 30px;
       height: 0px;
       margin: auto;
       background: white;
       content: "";
       padding-top: 3px;
-      margin-top: 7px; }
+      margin-top: 10px; }
       .menu-button__icon__sticks::before {
         display: block;
-        width: 30px;
         height: 3px;
-        margin: 0 auto;
-        margin-top: 7px;
+        margin-top: 8px;
         background: white;
         content: ""; }
       .menu-button__icon__sticks::after {
         display: block;
-        width: 30px;
         height: 3px;
-        margin: 0 auto;
-        margin-top: 7px;
+        margin-top: 8px;
         background: white;
         content: ""; }
+    .menu-button__icon--closing {
+      background: transparent; }
+      .menu-button__icon--closing .menu-button__icon__sticks {
+        background: transparent; }
+        .menu-button__icon--closing .menu-button__icon__sticks::before {
+          height: 2px;
+          transform: rotate(45deg);
+          background: #3c3c3c; }
+        .menu-button__icon--closing .menu-button__icon__sticks::after {
+          margin-top: -2px;
+          height: 2px;
+          transform: rotate(-45deg);
+          background: #3c3c3c; }
 
 .block__header {
   display: block;
