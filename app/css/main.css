@@ -1,6 +1,9 @@
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: white; }
 
 a {
   text-decoration: none; }
@@ -9,13 +12,67 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   width: 96vw;
-  padding: 2vw;
-  z-index: 2; }
+  padding: 2vw; }
   .header--absolute {
     position: absolute; }
     .header--absolute__logo .logo__element1 {
       text-shadow: 0px 0px 1px white; }
+  .header__page-title {
+    font-size: 21px;
+    margin-left: -25px;
+    font-weight: bold;
+    color: #4f4f4f; }
+  .header__border {
+    margin: 2vw 16vw;
+    flex-basis: 100%;
+    height: min-content;
+    border-bottom: 1px solid #a4a4a4; }
+
+.page-nav {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2vw; }
+  .page-nav__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: 140px;
+    cursor: pointer; }
+    @media (max-width: 1050px) {
+      .page-nav__item {
+        flex-basis: 100px; } }
+    .page-nav__item:hover .item-icon {
+      border: 2px solid #c3402c;
+      border-radius: 100px; }
+    .page-nav__item:hover .item-icon__wrap-image {
+      border-color: white;
+      background: #c3402c; }
+    .page-nav__item:hover .item-icon__image {
+      filter: brightness(2000%); }
+  .page-nav__name {
+    padding-top: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    width: min-content;
+    color: #3e3e3e; }
+
+.item-icon {
+  border: 2px solid transparent; }
+  .item-icon__wrap-image {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid #c3402c; }
+  .item-icon__image {
+    width: 21px;
+    margin: auto; }
 
 .menu {
   position: absolute;
@@ -23,6 +80,7 @@ a {
   flex-wrap: wrap;
   padding: 0 2vw;
   padding-top: 8vw;
+  top: 0;
   justify-content: center;
   text-align: center;
   font-weight: bold;
@@ -34,12 +92,15 @@ a {
     display: flex; }
   @media (max-width: 480px) {
     .menu {
-      padding-top: 16vw; } }
+      padding-top: 12vw; } }
   .menu__header {
     flex-basis: 100%;
     font-size: 48px;
     padding: 1vw;
     color: #c3402c; }
+    @media (max-width: 1050px) {
+      .menu__header {
+        font-size: 32px; } }
   .menu__border {
     margin: 0 100vw;
     flex-basis: 100%;
@@ -65,6 +126,9 @@ a {
 .link {
   display: flex;
   padding: 0.5vw 0; }
+  @media (max-width: 768px) {
+    .link {
+      padding: 2vw 0; } }
   .link:hover .link__name--border {
     display: block; }
   .link:hover .link__section {
@@ -75,6 +139,9 @@ a {
     font-weight: bold;
     color: #4f4f4f;
     z-index: 1; }
+    @media (max-width: 1050px) {
+      .link__name {
+        font-size: 28px; } }
     @media (max-width: 768px) {
       .link__name {
         font-size: 24px; } }
@@ -82,21 +149,27 @@ a {
       .link__name {
         font-size: 18px; } }
     .link__name--border {
+      font-size: 34px;
       z-index: 0;
       display: none;
       position: absolute;
-      width: max-content;
       color: transparent;
+      width: max-content;
       margin-top: 24px;
       height: 10px;
       background: #c3402c;
       margin-bottom: 2vw; }
+      @media (max-width: 1050px) {
+        .link__name--border {
+          font-size: 30px; } }
       @media (max-width: 768px) {
         .link__name--border {
+          font-size: 26px;
           margin-top: 18px;
           height: 8px; } }
       @media (max-width: 480px) {
         .link__name--border {
+          font-size: 20px;
           margin-top: 13px;
           height: 6px; } }
   .link__section {
@@ -132,6 +205,7 @@ a {
       padding-top: 75px; } }
 
 .logo {
+  z-index: 2;
   font-size: 24px; }
   .logo__element1 {
     color: #c3402c;
@@ -142,7 +216,8 @@ a {
 .menu-button {
   display: flex;
   align-items: center;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 2; }
   .menu-button__text {
     margin-right: 1vw;
     color: #4f4f4f; }
@@ -190,6 +265,8 @@ a {
   line-height: 40px;
   font-weight: bold;
   color: #3e3e3e; }
+  .block__header--icon {
+    width: 40px; }
   .block__header--border {
     width: max-content;
     color: transparent;
@@ -200,8 +277,8 @@ a {
 
 .block__text {
   color: #a4a4a4;
-  font-size: 12px;
-  line-height: 16px; }
+  font-size: 16px;
+  line-height: 21px; }
 
 .block__more {
   display: none;
@@ -212,6 +289,95 @@ a {
   padding-bottom: 5px;
   margin-left: 1vw;
   margin-top: 1vw; }
+
+.block__button {
+  display: block;
+  border: 1px solid #c3402c;
+  color: #c3402c;
+  text-align: center;
+  width: 220px;
+  padding: 10px 0;
+  margin-top: 2vw; }
+  .block__button:hover {
+    background: #c3402c;
+    color: white; }
+
+.preview {
+  display: flex;
+  margin: 0 10vw;
+  margin-bottom: 4vw;
+  flex-wrap: wrap; }
+  .preview__block {
+    flex-basis: 37%;
+    padding-left: 3%; }
+    @media (max-width: 1050px) {
+      .preview__block {
+        padding-left: 0;
+        padding-top: 10px;
+        flex-basis: 100%; } }
+    .preview__block__header--border {
+      margin-top: -12px;
+      min-width: 60px;
+      max-height: 6px; }
+
+.image-block {
+  position: relative;
+  width: 100%;
+  flex-basis: 60%; }
+  @media (max-width: 1050px) {
+    .image-block {
+      flex-basis: 100%; } }
+  .image-block__name {
+    position: absolute;
+    left: -50px;
+    bottom: 70px;
+    font-size: 32px;
+    background: #c3402c;
+    font-weight: bold;
+    color: white;
+    padding: 10px 30px; }
+    @media (max-width: 1050px) {
+      .image-block__name {
+        top: 0;
+        bottom: auto;
+        padding: 10px 5px;
+        right: 0;
+        left: auto;
+        opacity: .6;
+        font-size: 18px; } }
+    @media (max-width: 768px) {
+      .image-block__name {
+        font-size: 16px; } }
+    @media (max-width: 480px) {
+      .image-block__name {
+        font-size: 12px; } }
+  .image-block__price {
+    position: absolute;
+    left: -30px;
+    bottom: 20px;
+    font-size: 18px;
+    background: #3e3e3e;
+    color: white;
+    padding: 8px 30px; }
+    @media (max-width: 1050px) {
+      .image-block__price {
+        top: 52px;
+        opacity: .6;
+        bottom: auto;
+        padding: 8px 5px;
+        right: 0;
+        left: auto; } }
+    @media (max-width: 768px) {
+      .image-block__price {
+        top: 38px;
+        font-size: 14px; } }
+    @media (max-width: 480px) {
+      .image-block__price {
+        top: 34px;
+        font-size: 12px; } }
+  .image-block__image {
+    width: 100%;
+    height: auto; }
 
 .card {
   position: relative;
