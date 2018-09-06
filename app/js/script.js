@@ -1,20 +1,24 @@
 $("document").ready(function() {
-	menuToggle();
+	menuButtonToggle();
 })
 
-function menuToggle() {
+function menuButtonToggle() {
+	let menu = $(".menu");
+	let menuOpenedClass = "menu--opened";
 	let menuButton = $(".menu-button");
 	let menuButtonText = $(".menu-button__text");
-	let menuIcon = $(".menu-button__icon");
-	let closingClass = "menu-button__icon--closing";
+	let menuButtonIcon = $(".menu-button__icon");
+	let iconClosingClass = "menu-button__icon--closing";
 
 	menuButton.click(function() {
-		if(menuIcon.hasClass(closingClass)) {
+		if(menuButtonIcon.hasClass(iconClosingClass)) {
 			menuButtonText.html("Меню");
-			menuIcon.removeClass(closingClass)
+			menuButtonIcon.removeClass(iconClosingClass)
+			menu.removeClass(menuOpenedClass);
 		} else {
 			menuButtonText.html("Закрыть");
-			menuIcon.addClass(closingClass);
+			menuButtonIcon.addClass(iconClosingClass);
+			menu.addClass(menuOpenedClass);
 		}
 	})
 }

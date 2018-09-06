@@ -1,7 +1,8 @@
 //<цвета>
-$blue: #0093fa
-$grey: #3c3c3c
-$light_grey: #9b9b9b
+$red: #c3402c
+$dark_grey: #3e3e3e
+$grey: #4f4f4f
+$light_grey: #a4a4a4
 //</цвета>
 //<сетка>
 $columns: 25
@@ -16,16 +17,19 @@ $small: "max-width: 480px"
 //<теги>
 body
     margin: 0
-    background: #f5f5f5
-    font-family: sans-serif
+    font-family: Arial, Helvetica, sans-serif
+
+a
+    text-decoration: none
 //</теги>
 //<основные_части_сайта>
 .header
     display: flex
+    justify-content: space-between
     align-items: center
     width: $columns * $atom - $atom
     padding: $atom / 2
-    justify-content: space-between
+    z-index: 2
     &--absolute
         position: absolute
         &__logo
@@ -34,33 +38,101 @@ body
 
 .menu
     position: absolute
-    width: 100vw
-    min-height: 100vh
-    background: white
-    display: flex
-    justify-content: center
-    align-items: center
+    display: none
     flex-wrap: wrap
+    padding: 0 $atom/2
+    padding-top: 2*$atom
+    justify-content: center
+    text-align: center
     font-weight: bold
+    min-height: 100vh
+    width: 100%
+    box-sizing: border-box
+    z-index: 1
+    &--opened
+        display: flex
+    @media ($small)
+        padding-top: 4*$atom
     &__header
-        flex-basis: 30vw
-        font-size: 36px
-        color: $blue
-    &__item
-        font-size: 28px
-        color: $grey
+        flex-basis: 100%
+        font-size: 48px
         padding: $offset
+        color: $red
     &__border
-        width: 200px
-        padding: $offset
+        margin: 0 $columns * $atom
+        flex-basis: 100%
+        min-width: 350px
+        height: min-content
         border-bottom: 1px solid $light_grey
     &__social
+        justify-content: center
+
+.list
+    flex-basis: 300px
+    @media ($medium)
+        flex-basis: 200px
+    @media ($small)
+        flex-basis: 130px
+    &--right
+        display: block
+        &__link
+            justify-content: flex-end
+
+.link
+    display: flex
+    padding: $offset/2 0
+    &:hover
+        .link__name
+            &--border
+                display: block
+        .link__section
+            color: $red
+    &__name
+        display: block
+        font-size: 32px
+        font-weight: bold
+        color: $grey
+        z-index: 1
+        @media ($medium)
+            font-size: 24px
+        @media ($small)
+            font-size: 18px
+        &--border
+            z-index: 0
+            display: none
+            position: absolute
+            width: max-content
+            color: transparent
+            margin-top: 24px
+            height: 10px
+            background: $red
+            margin-bottom: $atom/2
+            @media ($medium)
+                margin-top: 18px
+                height: 8px
+            @media ($small)
+                margin-top: 13px
+                height: 6px    
+    &__section
+        font-size: 28px
+        color: $light_grey
+        @media ($medium)
+            font-size: 21px
+        @media ($small)
+            font-size: 16px
+.social
+        flex-basis: 100%
         display: flex
         &__item
-            padding: $offset
-    &--shift
-        @media ($big)
-            padding-top: 75px
+            display: flex
+            margin: $offset
+            height: 60px
+            width: 60px
+            border: 1px solid $red
+            align-items: center
+            justify-content: center
+            &:hover
+                background: rgba($light_grey, .5)
 
 .main
     display: flex
@@ -73,13 +145,12 @@ body
 //<глобальные_блоки>
 //  <логотип>
 .logo
+    font-size: 24px
     &__element1
-        color: $blue
+        color: $red
         font-weight: bold
-        font-size: 24px
     &__element2
         color: $grey
-        font-size: 24px
 //  </логотип>
 //  <кнопка_меню>
 .menu-button
@@ -90,7 +161,7 @@ body
         margin-right: $offset
         color: $grey
     &__icon
-        background: $blue
+        background: $red
         width: 50px
         height: 45px
         &__sticks
@@ -126,9 +197,6 @@ body
                     height: 2px
                     transform: rotate(-45deg)
                     background: $grey
-
-        
-
 //  </кнопка_меню>
 //  <контейнер_контента>
 .block
@@ -137,13 +205,13 @@ body
         font-size: 32px
         line-height: 40px
         font-weight: bold
-        color: $grey
+        color: $dark_grey
         &--border
             width: max-content
             color: transparent
             margin-top: -14px
             height: 11px
-            background: $blue
+            background: $red
             margin-bottom: $atom/2
     &__text
         color: $light_grey
@@ -162,6 +230,7 @@ body
 //</глобальные_блоки>
 //<блоки_главной>
 .card
+    position: relative
     display: flex
     align-items: flex-end
     width: 5*$atom
@@ -172,14 +241,25 @@ body
         width: auto
         flex-basis: 100vw
     &:hover
-        background: $blue
+        background: rgba($red, .8)
         .card__block
             .block__header, .block__text
                 color: white
             .block__header--border
+                background: transparent
                 color: transparent
             .block__more
                 display: block
+        &::before
+            position: absolute
+            content: ""
+            top: 0
+            right: 0
+            left: 0
+            bottom: 0
+            background-image: url("../images/card-hover.jpg")
+            background-size: 100% auto
+            z-index: -1
     &__block
         padding-bottom: $atom
 //<блоки_главной>
