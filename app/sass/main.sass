@@ -42,6 +42,8 @@ a
         margin-left: -25px
         font-weight: bold
         color: $grey
+        @media ($small)
+            margin-left: 0px
     &__border
         margin: 2*$offset 4*$atom
         flex-basis: 100%
@@ -204,17 +206,25 @@ a
 
 .main
     display: flex
-    justify-content: center
     flex-wrap: wrap
     &--shift
         @media ($big)
             padding-top: 75px
+    &--grid1
+        margin: 0 2.5*$atom
+    &--grid2
+        margin: 0 5*$atom
+        @media ($big)
+            margin: 0 2.5*$atom
+
 //</основные_части_сайта>
 //<глобальные_блоки>
 //  <логотип>
 .logo
     z-index: 2
     font-size: 24px
+    @media ($small)
+        font-size: 18px
     &__element1
         color: $red
         font-weight: bold
@@ -270,6 +280,27 @@ a
 //  </кнопка_меню>
 //  <контейнер_контента>
 .block
+    &--left
+        display: block
+        width: 70%
+        @media ($big)
+            width: 100%
+    &__title
+        display: block
+        font-size: 50px
+        font-weight: bold
+        color: $dark_grey
+        @media ($big)
+            font-size: 32px
+        @media ($small)
+            font-size: 24px
+        &--border
+            width: max-content
+            color: transparent
+            margin-top: -18px
+            height: 21px
+            background: $red
+            margin-bottom: $atom/2
     &__header
         display: block
         font-size: 32px
@@ -289,6 +320,11 @@ a
         color: $light_grey
         font-size: 16px
         line-height: 21px
+        &--grey
+            color: $grey
+        &--offset
+            display: block
+            margin: 2 * $offset 0
     &__more
         display: none
         border-bottom: 1px
@@ -313,12 +349,14 @@ a
 //  <контейнер_предпросмотра>
 .preview
     display: flex
-    margin: 0 2.5*$atom
     margin-bottom: $atom
     flex-wrap: wrap
     &__block
         flex-basis: 37%
         padding-left: 3%
+        &--half
+            flex-basis: 50%
+            padding: 0
         @media ($big)
             padding-left: 0
             padding-top: 10px
@@ -333,6 +371,8 @@ a
     position: relative
     width: 100%
     flex-basis: 60%
+    &--half
+        flex-basis: 50%
     @media ($big)
         flex-basis: 100%
     &__name
