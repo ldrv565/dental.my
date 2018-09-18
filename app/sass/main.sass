@@ -31,7 +31,7 @@ a
     align-items: center
     flex-wrap: wrap
     width: $columns * $atom - $atom
-    padding: $atom / 2
+    padding: $offset $atom / 2
     &--absolute
         position: absolute
         &__logo
@@ -45,7 +45,7 @@ a
         @media ($small)
             margin-left: 0px
     &__border
-        margin: 2*$offset 4*$atom
+        margin: $offset 4*$atom
         flex-basis: 100%
         height: min-content
         border-bottom: 1px solid $light_grey
@@ -208,6 +208,7 @@ a
     display: flex
     flex-wrap: wrap
     &--shift
+        justify-content: center
         @media ($big)
             padding-top: 75px
     &--grid1
@@ -216,6 +217,8 @@ a
         margin: 0 5*$atom
         @media ($big)
             margin: 0 2.5*$atom
+        @media ($medium)
+            margin: 0 $atom
 
 //</основные_части_сайта>
 //<глобальные_блоки>
@@ -288,8 +291,10 @@ a
     &__title
         display: block
         font-size: 50px
+        line-height: .4em
         font-weight: bold
         color: $dark_grey
+        margin-top: 1.5*$atom
         @media ($big)
             font-size: 32px
         @media ($small)
@@ -297,8 +302,7 @@ a
         &--border
             width: max-content
             color: transparent
-            margin-top: -18px
-            height: 21px
+            margin-top: .05em
             background: $red
             margin-bottom: $atom/2
     &__header
@@ -317,14 +321,13 @@ a
             background: $red
             margin-bottom: $atom/2
     &__text
+        display: block
+        margin: 2 * $offset 0
         color: $light_grey
         font-size: 16px
-        line-height: 21px
+        line-height: 1.8em
         &--grey
             color: $grey
-        &--offset
-            display: block
-            margin: 2 * $offset 0
     &__more
         display: none
         border-bottom: 1px
@@ -335,28 +338,51 @@ a
         margin-left: $offset
         margin-top: $offset
     &__button
-        display: block
+        display: inline
         border: 1px solid $red
         color: $red
         text-align: center
-        width: 220px
-        padding: 10px 0
-        margin-top: 2*$offset
+        padding: 10px 5%
+        cursor: pointer
         &:hover
             background: $red
             color: white
+    &__numeric-icon
+        flex-basis: auto
+        width: 0
+        height: 0
+        padding: 25px 25px
+        background: $red
+        border-radius: 100px
+        box-sizing: border-box
+        .block__header
+            margin: -30px
+
 //  </контейнер_контента>
 //  <контейнер_предпросмотра>
 .preview
     display: flex
+    width: 100%
+    justify-content: space-between
+    align-items: flex-end
     margin-bottom: $atom
     flex-wrap: wrap
     &__block
         flex-basis: 37%
         padding-left: 3%
         &--half
-            flex-basis: 50%
+            display: flex
+            flex-wrap: nowrap
+            flex-basis: 45%
             padding: 0
+            .block
+                flex-basis: auto
+                margin-left: 2vw
+            .block__text
+                display: flex
+                border-right: 1px solid rgba($light_grey,.5)
+                align-items: center
+                padding-right: 10%
         @media ($big)
             padding-left: 0
             padding-top: 10px
@@ -369,10 +395,9 @@ a
     
 .image-block
     position: relative
-    width: 100%
     flex-basis: 60%
     &--half
-        flex-basis: 50%
+        flex-basis: 47%
     @media ($big)
         flex-basis: 100%
     &__name
