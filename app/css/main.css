@@ -364,9 +364,10 @@ a {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  align-items: flex-end;
   margin-bottom: 4vw;
   flex-wrap: wrap; }
+  .preview--align--end {
+    align-items: flex-end; }
   .preview__block {
     flex-basis: 37%;
     padding-left: 3%; }
