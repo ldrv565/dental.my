@@ -219,7 +219,14 @@ a
             margin: 0 2.5*$atom
         @media ($medium)
             margin: 0 $atom
-
+.footer
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    flex-wrap: wrap
+    width: $columns * $atom - $atom
+    padding: $offset $atom / 2
+    background: $grey
 //</основные_части_сайта>
 //<глобальные_блоки>
 //  <логотип>
@@ -233,6 +240,8 @@ a
         font-weight: bold
     &__element2
         color: $grey
+        &--white
+            color: white
 //  </логотип>
 //  <кнопка_меню>
 .menu-button
