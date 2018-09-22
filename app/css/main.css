@@ -548,7 +548,7 @@ a {
     padding-bottom: 20px; }
   .cell__text {
     color: #a4a4a4;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.4em; }
   .cell__buttons {
     display: flex;
@@ -578,6 +578,23 @@ a {
     .cell__button:hover {
       background: white;
       color: #c3402c; }
+  .cell__document-img {
+    width: 100%;
+    opacity: .5;
+    cursor: pointer; }
+    .cell__document-img:hover {
+      opacity: 1; }
+  .cell__document-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #3e3e3e;
+    padding: 10px 0;
+    margin: 10px 0;
+    border-bottom: 2px solid #c3402c; }
+  .cell__date {
+    padding-top: 20px;
+    font-size: 14px;
+    color: #c3402c; }
 
 .card {
   position: relative;
