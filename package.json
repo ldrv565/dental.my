@@ -1,0 +1,19 @@
+{
+  "name": "dental.my",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ldrv565/dental.my.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ldrv565/dental.my/issues"
+  },
+  "homepage": "https://github.com/ldrv565/dental.my#readme"
+}

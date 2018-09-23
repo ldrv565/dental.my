@@ -44,6 +44,7 @@ a
         font-weight: bold
         color: $grey
         @media ($small)
+            font-size: 12px
             margin-left: 0px
     &__border
         margin: $offset 4*$atom
@@ -295,6 +296,7 @@ a
 //  </кнопка_меню>
 //  <контейнер_контента>
 .block
+    width: 100%
     &--left
         display: block
         width: 70%
@@ -303,6 +305,7 @@ a
             width: 100%
     &__title
         display: block
+        width: max-content
         font-size: 50px
         line-height: .4em
         font-weight: bold
@@ -313,7 +316,6 @@ a
         @media ($small)
             font-size: 24px
         &--border
-            width: max-content
             color: transparent
             margin-top: .05em
             background: $red
@@ -361,9 +363,9 @@ a
         justify-content: center
         align-items: center
         height: 40px
-        min-width: 70px
+        min-width: max-content
         max-width: 200px
-        padding: 0 50px
+        padding: 0 $atom
         cursor: pointer
         &:hover
             background: $red
