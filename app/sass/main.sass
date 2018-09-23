@@ -343,6 +343,8 @@ a
         line-height: 1.8em
         &--grey
             color: $grey
+        &--no-margin
+            margin: 0
     &__more
         display: none
         color: white
@@ -406,9 +408,8 @@ a
             flex-basis: 45%
             padding: 0
             .block
-                width: 100%
                 margin-left: 2vw
-            .block__text
+            &__text
                 display: flex
                 border-right: 1px solid rgba($light_grey,.5)
                 align-items: center
@@ -521,6 +522,7 @@ a
         top: 0
         width: 100%
     &__name
+        width: max-content
         font-size: 22px
         font-weight: bold
         color: $grey

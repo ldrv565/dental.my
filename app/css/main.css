@@ -343,6 +343,8 @@ a {
     line-height: 1.8em; }
     .block__text--grey {
       color: #4f4f4f; }
+    .block__text--no-margin {
+      margin: 0; }
   .block__more {
     display: none;
     color: white;
@@ -405,9 +407,8 @@ a {
       flex-basis: 45%;
       padding: 0; }
       .preview__block--half .block {
-        width: 100%;
         margin-left: 2vw; }
-      .preview__block--half .block__text {
+      .preview__block--half__text {
         display: flex;
         border-right: 1px solid rgba(164, 164, 164, 0.5);
         align-items: center;
@@ -532,6 +533,7 @@ a {
     top: 0;
     width: 100%; }
   .cell__name {
+    width: max-content;
     font-size: 22px;
     font-weight: bold;
     color: #4f4f4f;
