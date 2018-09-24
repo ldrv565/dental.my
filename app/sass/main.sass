@@ -44,7 +44,7 @@ a
         font-weight: bold
         color: $grey
         @media ($small)
-            font-size: 12px
+            font-size: 14px
             margin-left: 0px
     &__border
         margin: $offset 4*$atom
@@ -360,7 +360,7 @@ a
         width: 100%
         margin: auto
         &--small
-            width: 4.5*$atom
+            width: 6*$atom
             flex-wrap: nowrap
             @media  ($big)
                 width: 100%
@@ -370,11 +370,14 @@ a
         color: $red
         justify-content: center
         align-items: center
+        font-size: 14px
         height: 40px
         min-width: 120px
-        width: 150px
+        width: 140px
         margin: .5*$offset 0
         cursor: pointer
+        @media ($small)
+            width: 120px
         &--big
             min-width: max-content
             padding: 0 $offset
@@ -425,13 +428,6 @@ a
     &__block
         flex-basis: 37%
         padding-left: 3%
-        &--absolute
-            position: absolute
-            top: 0
-            padding-top: 50px
-            right: $atom
-            width: 7*$atom
-            background: white
         &--half
             display: flex
             flex-wrap: nowrap
@@ -453,6 +449,26 @@ a
                 margin-top: -12px
                 min-width: 60px
                 max-height: 6px
+        &--absolute
+            position: absolute
+            top: 0
+            right: 0
+            left: 7*$atom
+            width: auto
+            padding: .5*$atom 0
+            padding-left: 2.3*$offset
+            background: white
+            &__header
+                font-size: 21px
+                font-weight: bold
+                color: $grey
+                padding: $offset 0
+                @media ($medium)
+                    font-size: 16px
+            @media ($medium)
+                left: 0
+                bottom: 0
+                background: rgba(white,.8)
     
 .image-block
     position: relative
@@ -460,6 +476,11 @@ a
     line-height: 0
     &--half
         flex-basis: 49.5%
+    &--fill
+        @media ($big)
+            flex-basis: 100%
+
+   
     &__name
         position: absolute
         left: -50px
@@ -573,6 +594,8 @@ a
         color: $grey
         border-bottom: 2px solid $red
         padding: .3em 0
+        @media ($small)
+            width: 100%
     &__job
         font-size: 16px
         color: $red
