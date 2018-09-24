@@ -303,6 +303,7 @@ a
         padding-right: 10%
         @media ($big)
             width: 100%
+            padding-right: 0
     &__title
         display: block
         width: max-content
@@ -343,8 +344,6 @@ a
         line-height: 1.8em
         &--grey
             color: $grey
-        &--no-margin
-            margin: 0
     &__more
         display: none
         color: white
@@ -427,7 +426,7 @@ a
         align-items: flex-end
     &__block
         flex-basis: 37%
-        padding-left: 3%
+        padding-left: 3% 
         &--half
             display: flex
             flex-wrap: nowrap
@@ -440,6 +439,16 @@ a
                 border-right: 1px solid rgba($light_grey,.5)
                 align-items: center
                 padding-right: 10%
+        &--contacts
+            flex-basis: 38%
+            &__header
+                display: block
+                font-size: 16px
+                color: $red
+            &__text
+                display: block
+                font-size: 16px
+                color: $grey
         @media ($big)
             padding-left: 0
             padding-top: 10px
@@ -476,6 +485,11 @@ a
     line-height: 0
     &--half
         flex-basis: 49.5%
+    &--map
+        flex-basis: 60%
+        border-left: .6*$offset solid $red
+        border-top: .6*$offset solid $red
+        height: min-content
     &--fill
         @media ($big)
             flex-basis: 100%
