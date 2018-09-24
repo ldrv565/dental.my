@@ -356,7 +356,7 @@ a
     &__buttons
         display: flex
         flex-wrap: wrap
-        justify-content: space-between
+        justify-content: space-around
         width: 100%
         margin: auto
         &--small
@@ -401,6 +401,7 @@ a
 //  </контейнер_контента>
 //  <контейнер_предпросмотра>
 .preview
+    position: relative
     display: flex
     width: 100%
     justify-content: space-between
@@ -424,6 +425,13 @@ a
     &__block
         flex-basis: 37%
         padding-left: 3%
+        &--absolute
+            position: absolute
+            top: 0
+            padding-top: 50px
+            right: $atom
+            width: 7*$atom
+            background: white
         &--half
             display: flex
             flex-wrap: nowrap
@@ -461,6 +469,7 @@ a
         font-weight: bold
         color: white
         padding: 10px 30px
+        line-height: 1em
         @media ($big)
             top: 0
             bottom: auto
@@ -481,6 +490,7 @@ a
         background: $dark_grey
         color: white
         padding: 8px 30px
+        line-height: 1em
         @media ($big)
             top: 52px
             opacity: .6
@@ -659,6 +669,42 @@ a
     display: flex
     width: 100%
     justify-content: flex-end
+    margin-top: .5*$atom
+    margin-right: $atom
     &__arrow
+        width: 30px
+        height: 12px
+        &--left
+            margin-top: 30px
+            margin-right: 30px
+            transform: rotate(90deg)
+        &--right
+            margin-top: 10px
+            margin-left: 30px
+            transform: rotate(-90deg)
+        &::before
+            display: block
+            height: 2px
+            margin-top: 8px
+            margin-right: 20px
+            margin-left: -20px
+            background: $red
+            content: ""
+            transform: rotate(45deg)
+        &::after
+            display: block
+            height: 2px
+            margin-top: -2px
+            background: $red
+            content: ""
+            transform: rotate(-45deg)
     &__page_number
+        height: 5px
+        margin: 15px 5px
+        color: $grey
+        font-weight: bold
+        &--active
+            color: $red
+            font-size: 21px
+            margin-top: 10px
 //</кнопки_слайдера>
