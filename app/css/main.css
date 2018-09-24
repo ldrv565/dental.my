@@ -355,9 +355,16 @@ a {
     margin-top: 1vw; }
   .block__buttons {
     display: flex;
-    justify-content: space-around;
-    width: 24vw;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
     margin: auto; }
+    .block__buttons--small {
+      width: 18vw;
+      flex-wrap: nowrap; }
+      @media (max-width: 1100px) {
+        .block__buttons--small {
+          width: 100%; } }
   .block__button {
     display: flex;
     border: 1px solid #c3402c;
@@ -365,10 +372,13 @@ a {
     justify-content: center;
     align-items: center;
     height: 40px;
-    min-width: max-content;
-    max-width: 200px;
-    padding: 0 4vw;
+    min-width: 120px;
+    width: 150px;
+    margin: 0.5vw 0;
     cursor: pointer; }
+    .block__button--big {
+      min-width: max-content;
+      padding: 0 1vw; }
     .block__button:hover {
       background: #c3402c;
       color: white; }
@@ -396,6 +406,20 @@ a {
   justify-content: space-between;
   margin-bottom: 4vw;
   flex-wrap: wrap; }
+  .preview--offset {
+    margin: 2vw 0; }
+  .preview--half {
+    flex-basis: 49.75%;
+    margin-bottom: 5px;
+    opacity: .9;
+    cursor: pointer;
+    background: rgba(164, 164, 164, 0.5); }
+    @media (max-width: 768px) {
+      .preview--half {
+        flex-basis: 100%; } }
+    .preview--half:hover {
+      opacity: 1;
+      background: transparent; }
   .preview--align--end {
     align-items: flex-end; }
   .preview__block {
@@ -425,12 +449,10 @@ a {
 
 .image-block {
   position: relative;
-  flex-basis: 60%; }
+  flex-basis: 60%;
+  line-height: 0; }
   .image-block--half {
-    flex-basis: 47%; }
-  @media (max-width: 1100px) {
-    .image-block {
-      flex-basis: 100%; } }
+    flex-basis: 49.5%; }
   .image-block__name {
     position: absolute;
     left: -50px;
@@ -479,6 +501,20 @@ a {
       .image-block__price {
         top: 34px;
         font-size: 12px; } }
+  .image-block__label {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding: 10px 2vw;
+    line-height: 1em; }
+    .image-block__label--left {
+      left: 0;
+      background: white;
+      color: #4f4f4f; }
+    .image-block__label--right {
+      right: 0;
+      background: #c3402c;
+      color: white; }
   .image-block__image {
     width: 100%;
     height: auto; }
@@ -627,3 +663,8 @@ a {
       z-index: -1; }
   .card__block {
     padding-bottom: 4vw; }
+
+.slider_buttons {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end; }
