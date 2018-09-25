@@ -86,14 +86,15 @@ a
 .item-icon
     border: 2px solid transparent
     &__wrap-image
-        display: flex
+        display: block
         width: 50px
         height: 50px
         border-radius: 50px
         border: 1px solid $red
+        box-sizing: border-box
+        padding: 25%
     &__image
-        width: 21px
-        margin: auto
+        width: 100%
 
 .menu
     position: absolute
@@ -151,11 +152,11 @@ a
         .link__section
             color: $red
     &__name
+        position: relative
         display: block
         font-size: 32px
         font-weight: bold
         color: $grey
-        z-index: 1
         @media ($big)
             font-size: 28px
         @media ($medium)
@@ -163,25 +164,12 @@ a
         @media ($small)
             font-size: 18px
         &--border
-            font-size: 34px
-            z-index: 0
+            z-index: -1
             position: absolute
+            bottom: 2px
+            height: .3em
             color: transparent
-            width: max-content
-            margin-top: 24px
-            height: 10px
             background: transparent
-            margin-bottom: $atom/2
-            @media ($big)
-                font-size: 30px
-            @media ($medium)
-                font-size: 26px
-                margin-top: 18px
-                height: 8px
-            @media ($small)
-                font-size: 20px
-                margin-top: 13px
-                height: 6px    
     &__section
         font-size: 28px
         color: $light_grey
@@ -305,10 +293,10 @@ a
             width: 100%
             padding-right: 0
     &__title
+        position: relative
         display: block
         width: max-content
         font-size: 50px
-        line-height: .4em
         font-weight: bold
         color: $dark_grey
         margin-top: 1.5*$atom
@@ -317,25 +305,31 @@ a
         @media ($small)
             font-size: 24px
         &--border
+            position: absolute
+            bottom: 0
+            left: 0
+            z-index: -1
+            height: .4em
+            display: inline
             color: transparent
-            margin-top: .05em
             background: $red
-            margin-bottom: $atom/2
     &__header
+        position: relative
         display: block
         font-size: 32px
-        line-height: 40px
         font-weight: bold
         color: $dark_grey
         &--icon
             width: 40px
         &--border
-            width: max-content
+            position: absolute
+            bottom: 0
+            left: 0
+            z-index: -1
+            display: inline
             color: transparent
-            margin-top: -14px
             height: 11px
             background: $red
-            margin-bottom: $atom/2
     &__text
         display: block
         margin: 2 * $offset 0
@@ -455,7 +449,8 @@ a
             flex-basis: 100%
         &__header
             &--border
-                margin-top: -12px
+                position: absolute
+                bottom: 6px
                 min-width: 60px
                 max-height: 6px
         &--absolute
