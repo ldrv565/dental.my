@@ -24,6 +24,8 @@ body
     overflow-x: hidden
 a
     text-decoration: none
+h1, h2, h3, h4
+    margin: 0
 //</теги>
 //<основные_части_сайта>
 .header
@@ -44,7 +46,7 @@ a
         font-weight: bold
         color: $grey
         @media ($small)
-            font-size: 14px
+            font-size: 13px
             margin-left: 0px
     &__border
         margin: $offset 4*$atom
@@ -323,6 +325,8 @@ a
         font-size: 32px
         font-weight: bold
         color: $dark_grey
+        @media ($medium)
+            font-size: 24px
         &--icon
             width: 40px
         &--border
@@ -396,8 +400,13 @@ a
         background: $red
         border-radius: 100px
         box-sizing: border-box
+        @media ($medium)
+            padding: 20px 20px
         .block__header
             margin: -30px
+            @media ($medium)
+                padding-top: 7px
+                padding-left: 7px
 //  </контейнер_контента>
 //  <контейнер_предпросмотра>
 .preview
