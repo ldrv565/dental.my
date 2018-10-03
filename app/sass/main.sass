@@ -1,3 +1,17 @@
+@mixin addFont ($fontName)
+    font-family: $fontName
+    src: url('../fonts/'+$fontName+'.eot')
+    src: url('../fonts/'+$fontName+'.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/'+$fontName+'.woff') format('woff'),
+    url('../fonts/'+$fontName+'.ttf') format('truetype')
+        
+@font-face 
+    @include addFont('helveticaneuecyr-bold')
+@font-face 
+    @include addFont('helveticaneuecyr-light')
+@font-face 
+    @include addFont('helveticaneuecyr-roman')
+    
 //<цвета>
 $red: #c3402c
 $dark_grey: #3e3e3e
@@ -17,7 +31,7 @@ $small: "max-width: 480px"
 //<теги>
 body
     margin: 0
-    font-family: Arial, Helvetica, sans-serif
+    font-family: helveticaneuecyr-roman
     background-size: 100% auto
     background-repeat: no-repeat
     background-color: white
@@ -43,7 +57,7 @@ h1, h2, h3, h4
     &__page-title
         font-size: 21px
         margin-left: -25px
-        font-weight: bold
+        font-family: helveticaneuecyr-bold
         color: $grey
         @media ($small)
             font-size: 13px
@@ -78,7 +92,7 @@ h1, h2, h3, h4
     &__name
         padding-top: 5px
         font-size: 12px
-        font-weight: bold
+        font-family: helveticaneuecyr-bold
         text-align: center
         display: block
         width: 100%
@@ -107,7 +121,7 @@ h1, h2, h3, h4
     top: 0
     justify-content: center
     text-align: center
-    font-weight: bold
+    font-family: helveticaneuecyr-bold
     min-height: 100vh
     width: 100%
     box-sizing: border-box
@@ -157,7 +171,7 @@ h1, h2, h3, h4
         position: relative
         display: block
         font-size: 32px
-        font-weight: bold
+        font-family: helveticaneuecyr-bold
         color: $grey
         @media ($big)
             font-size: 28px
@@ -232,7 +246,7 @@ h1, h2, h3, h4
     &__element1
         display: inline
         color: $red
-        font-weight: bold
+        font-family: helveticaneuecyr-bold
         font-size: 24px
         @media ($small)
             font-size: 18px
@@ -303,7 +317,7 @@ h1, h2, h3, h4
         display: block
         width: max-content
         font-size: 50px
-        font-weight: bold
+        font-family: helveticaneuecyr-bold
         color: $dark_grey
         margin-top: 1.5*$atom
         @media ($big)
@@ -323,7 +337,7 @@ h1, h2, h3, h4
         position: relative
         display: block
         font-size: 32px
-        font-weight: bold
+        font-family: helveticaneuecyr-bold
         color: $dark_grey
         @media ($medium)
             font-size: 24px
@@ -377,6 +391,7 @@ h1, h2, h3, h4
         width: 140px
         margin: .5*$offset 0
         cursor: pointer
+        font-family: helveticaneuecyr-light
         @media ($small)
             width: 120px
         &--big
@@ -388,7 +403,7 @@ h1, h2, h3, h4
         &--inversed
             color: white
             background: $red
-            font-weight: bold
+            font-family: helveticaneuecyr-bold
             &:hover
                 background: white
                 color: $red
@@ -477,7 +492,7 @@ h1, h2, h3, h4
             background: white
             &__header
                 font-size: 21px
-                font-weight: bold
+                font-family: helveticaneuecyr-bold
                 color: $grey
                 padding: $offset 0
                 @media ($medium)
@@ -511,7 +526,7 @@ h1, h2, h3, h4
         bottom: 70px
         font-size: 32px
         background: $red
-        font-weight: bold
+        font-family: helveticaneuecyr-bold
         color: white
         padding: 10px 30px
         line-height: 1em
@@ -614,7 +629,7 @@ h1, h2, h3, h4
     &__name
         width: max-content
         font-size: 22px
-        font-weight: bold
+        font-family: helveticaneuecyr-bold
         color: $grey
         border-bottom: 2px solid $red
         padding: .3em 0
@@ -665,7 +680,7 @@ h1, h2, h3, h4
             opacity: 1
     &__document-name
         font-size: 16px
-        font-weight: bold
+        font-family: helveticaneuecyr-bold
         color: $dark_grey
         padding: 10px 0
         margin: 10px 0
@@ -749,7 +764,7 @@ h1, h2, h3, h4
         height: 5px
         margin: 15px 5px
         color: $grey
-        font-weight: bold
+        font-family: helveticaneuecyr-bold
         &--active
             color: $red
             font-size: 21px

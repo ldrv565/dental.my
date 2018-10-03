@@ -1,6 +1,24 @@
+@font-face {
+    font-family: "helveticaneuecyr-bold";
+    src: url("../fonts/helveticaneuecyr-bold.eot");
+    src: url("../fonts/helveticaneuecyr-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/helveticaneuecyr-bold.woff") format("woff"), url("../fonts/helveticaneuecyr-bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "helveticaneuecyr-light";
+    src: url("../fonts/helveticaneuecyr-light.eot");
+    src: url("../fonts/helveticaneuecyr-light.eot?#iefix") format("embedded-opentype"), url("../fonts/helveticaneuecyr-light.woff") format("woff"), url("../fonts/helveticaneuecyr-light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "helveticaneuecyr-roman";
+    src: url("../fonts/helveticaneuecyr-roman.eot");
+    src: url("../fonts/helveticaneuecyr-roman.eot?#iefix") format("embedded-opentype"), url("../fonts/helveticaneuecyr-roman.woff") format("woff"), url("../fonts/helveticaneuecyr-roman.ttf") format("truetype");
+}
+
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: helveticaneuecyr-roman;
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-color: white;
@@ -38,7 +56,7 @@ h4 {
 .header__page-title {
     font-size: 21px;
     margin-left: -25px;
-    font-weight: bold;
+    font-family: helveticaneuecyr-bold;
     color: #4f4f4f;
 }
 
@@ -94,7 +112,7 @@ h4 {
 .page-nav__name {
     padding-top: 5px;
     font-size: 12px;
-    font-weight: bold;
+    font-family: helveticaneuecyr-bold;
     text-align: center;
     display: block;
     width: 100%;
@@ -129,7 +147,7 @@ h4 {
     top: 0;
     justify-content: center;
     text-align: center;
-    font-weight: bold;
+    font-family: helveticaneuecyr-bold;
     min-height: 100vh;
     width: 100%;
     box-sizing: border-box;
@@ -217,7 +235,7 @@ h4 {
     position: relative;
     display: block;
     font-size: 32px;
-    font-weight: bold;
+    font-family: helveticaneuecyr-bold;
     color: #4f4f4f;
 }
 
@@ -348,7 +366,7 @@ h4 {
 .logo__element1 {
     display: inline;
     color: #c3402c;
-    font-weight: bold;
+    font-family: helveticaneuecyr-bold;
     font-size: 24px;
 }
 
@@ -453,7 +471,7 @@ h4 {
     display: block;
     width: max-content;
     font-size: 50px;
-    font-weight: bold;
+    font-family: helveticaneuecyr-bold;
     color: #3e3e3e;
     margin-top: 6vw;
 }
@@ -485,7 +503,7 @@ h4 {
     position: relative;
     display: block;
     font-size: 32px;
-    font-weight: bold;
+    font-family: helveticaneuecyr-bold;
     color: #3e3e3e;
 }
 
@@ -563,6 +581,7 @@ h4 {
     width: 140px;
     margin: 0.5vw 0;
     cursor: pointer;
+    font-family: helveticaneuecyr-light;
 }
 
 @media (max-width: 480px) {
@@ -584,7 +603,7 @@ h4 {
 .block__button--inversed {
     color: white;
     background: #c3402c;
-    font-weight: bold;
+    font-family: helveticaneuecyr-bold;
 }
 
 .block__button--inversed:hover {
@@ -722,7 +741,7 @@ h4 {
 
 .preview__block--absolute__header {
     font-size: 21px;
-    font-weight: bold;
+    font-family: helveticaneuecyr-bold;
     color: #4f4f4f;
     padding: 1vw 0;
 }
@@ -774,7 +793,7 @@ h4 {
     bottom: 70px;
     font-size: 32px;
     background: #c3402c;
-    font-weight: bold;
+    font-family: helveticaneuecyr-bold;
     color: white;
     padding: 10px 30px;
     line-height: 1em;
@@ -943,7 +962,7 @@ h4 {
 .cell__name {
     width: max-content;
     font-size: 22px;
-    font-weight: bold;
+    font-family: helveticaneuecyr-bold;
     color: #4f4f4f;
     border-bottom: 2px solid #c3402c;
     padding: .3em 0;
@@ -1018,7 +1037,7 @@ h4 {
 
 .cell__document-name {
     font-size: 16px;
-    font-weight: bold;
+    font-family: helveticaneuecyr-bold;
     color: #3e3e3e;
     padding: 10px 0;
     margin: 10px 0;
@@ -1131,7 +1150,7 @@ h4 {
     height: 5px;
     margin: 15px 5px;
     color: #4f4f4f;
-    font-weight: bold;
+    font-family: helveticaneuecyr-bold;
 }
 
 .slider_buttons__page_number--active {
