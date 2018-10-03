@@ -751,6 +751,10 @@ h4 {
     flex-basis: 49.5%;
 }
 
+.image-block--half:hover {
+    z-index: 1;
+}
+
 .image-block--map {
     flex-basis: 60%;
     border-left: 0.6vw solid #c3402c;
