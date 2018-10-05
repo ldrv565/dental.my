@@ -146,13 +146,22 @@ h1, h2, h3, h4
         justify-content: center
 
 .list
-    flex-basis: 300px
+    position: relative
+    flex-basis: 600px
     @media ($medium)
-        flex-basis: 200px
+        flex-basis: 400px
     @media ($small)
-        flex-basis: 130px
+        flex-basis: 260px
     &--right
-        display: block
+        display: none
+        position: absolute
+        top: 0
+        right: 0
+        width: 300px
+        @media ($medium)
+            width: 200px
+        @media ($small)
+            width: 130px
         &__link
             justify-content: flex-end
 
@@ -165,8 +174,8 @@ h1, h2, h3, h4
         .link__name
             &--border
                 background: $red
-        .link__section
-            color: $red
+        .list--right
+            display: block
     &__name
         position: relative
         display: block
@@ -193,6 +202,8 @@ h1, h2, h3, h4
             font-size: 21px
         @media ($small)
             font-size: 16px
+        &:hover
+            color: $red
 .social
         flex-basis: 100%
         display: flex

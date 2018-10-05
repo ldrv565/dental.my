@@ -189,23 +189,40 @@ h4 {
 }
 
 .list {
-    flex-basis: 300px;
+    position: relative;
+    flex-basis: 600px;
 }
 
 @media (max-width: 768px) {
     .list {
-        flex-basis: 200px;
+        flex-basis: 400px;
     }
 }
 
 @media (max-width: 480px) {
     .list {
-        flex-basis: 130px;
+        flex-basis: 260px;
     }
 }
 
 .list--right {
-    display: block;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+}
+
+@media (max-width: 768px) {
+    .list--right {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .list--right {
+        width: 130px;
+    }
 }
 
 .list--right__link {
@@ -227,8 +244,8 @@ h4 {
     background: #c3402c;
 }
 
-.link:hover .link__section {
-    color: #c3402c;
+.link:hover .list--right {
+    display: block;
 }
 
 .link__name {
@@ -281,6 +298,10 @@ h4 {
     .link__section {
         font-size: 16px;
     }
+}
+
+.link__section:hover {
+    color: #c3402c;
 }
 
 .social {
