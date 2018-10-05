@@ -52,10 +52,9 @@ var count = 1;
 function changeNumber(direction) {
 	direction = (direction == "left") * -2 + 1
 	let size = $(".slider__element").length;
-	console.log(count);
 	if(count + direction && count + direction <= size) {
 		count += direction;
-		$($(".slider_buttons__page_number")[count - 1]).toggleClass("slider_buttons__page_number--active");
-		$($(".slider_buttons__page_number")[count - 1 - direction]).toggleClass("slider_buttons__page_number--active")
+		$($(".slider_buttons__page_number")[count - 1]).toggleClass("slider_buttons__page_number--active firm_color");
+		$($(".slider_buttons__page_number")[count - 1 - direction]).toggleClass("slider_buttons__page_number--active firm_color")
 	}
 }

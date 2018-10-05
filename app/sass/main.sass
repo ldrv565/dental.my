@@ -82,11 +82,11 @@ h1, h2, h3, h4
             flex-basis: 100px
         &:hover
             .item-icon
-                border: 2px solid $red
+                border-width: 2px
+                border-style: solid
                 border-radius: 100px
             .item-icon__wrap-image
                 border-color: white
-                background: $red
             .item-icon__image
                 filter: brightness(2000%)
     &__name
@@ -106,7 +106,8 @@ h1, h2, h3, h4
         width: 50px
         height: 50px
         border-radius: 50px
-        border: 1px solid $red
+        border-width: 1px
+        border-style: solid
         box-sizing: border-box
         padding: 25%
     &__image
@@ -134,7 +135,6 @@ h1, h2, h3, h4
         flex-basis: 100%
         font-size: 48px
         padding: $offset
-        color: $red
         @media ($big)
             font-size: 32px
     &__border
@@ -171,9 +171,6 @@ h1, h2, h3, h4
     @media ($medium)
         padding: 2 * $offset 0
     &:hover
-        .link__name
-            &--border
-                background: $red
         .list--right
             display: block
     &__name
@@ -202,8 +199,6 @@ h1, h2, h3, h4
             font-size: 21px
         @media ($small)
             font-size: 16px
-        &:hover
-            color: $red
 .social
         flex-basis: 100%
         display: flex
@@ -212,7 +207,8 @@ h1, h2, h3, h4
             margin: $offset
             height: 60px
             width: 60px
-            border: 1px solid $red
+            border-width: 1px
+            border-style: solid
             align-items: center
             justify-content: center
             &:hover
@@ -256,7 +252,6 @@ h1, h2, h3, h4
         font-size: 18px
     &__element1
         display: inline
-        color: $red
         font-family: helveticaneuecyr-bold
         font-size: 24px
         @media ($small)
@@ -276,7 +271,6 @@ h1, h2, h3, h4
         margin-right: $offset
         color: $grey
     &__icon
-        background: $red
         width: 50px
         height: 45px
         &__sticks
@@ -300,7 +294,7 @@ h1, h2, h3, h4
                 background: white
                 content: ""
         &--closing
-            background: transparent
+            background: transparent !important
             .menu-button__icon__sticks
                 background: transparent
                 &::before
@@ -343,7 +337,6 @@ h1, h2, h3, h4
             height: .4em
             display: inline
             color: transparent
-            background: $red
     &__header
         position: relative
         display: block
@@ -362,7 +355,6 @@ h1, h2, h3, h4
             display: inline
             color: transparent
             height: 11px
-            background: $red
     &__text
         display: block
         margin: 2 * $offset 0
@@ -392,8 +384,8 @@ h1, h2, h3, h4
                 width: 100%
     &__button
         display: flex
-        border: 1px solid $red
-        color: $red
+        border-width: 1px
+        border-style: solid
         justify-content: center
         align-items: center
         font-size: 14px
@@ -409,21 +401,17 @@ h1, h2, h3, h4
             min-width: max-content
             padding: 0 $offset
         &:hover
-            background: $red
             color: white
         &--inversed
             color: white
-            background: $red
             font-family: helveticaneuecyr-bold
             &:hover
                 background: white
-                color: $red
     &__numeric-icon
         flex-basis: auto
         width: 0
         height: 0
         padding: 25px 25px
-        background: $red
         border-radius: 100px
         box-sizing: border-box
         @media ($medium)
@@ -477,7 +465,6 @@ h1, h2, h3, h4
             &__header
                 display: block
                 font-size: 16px
-                color: $red
             &__text
                 display: block
                 font-size: 16px
@@ -523,20 +510,19 @@ h1, h2, h3, h4
             z-index: 1
     &--map
         flex-basis: 60%
-        border-left: .6*$offset solid $red
-        border-top: .6*$offset solid $red
+        border-left-width: .6*$offset 
+        border-left-style: solid 
+        border-top-width: .6*$offset
+        border-top-style: solid 
         height: min-content
     &--fill
         @media ($big)
             flex-basis: 100%
-
-   
     &__name
         position: absolute
         left: -50px
         bottom: 70px
         font-size: 32px
-        background: $red
         font-family: helveticaneuecyr-bold
         color: white
         padding: 10px 30px
@@ -587,7 +573,6 @@ h1, h2, h3, h4
             color: $grey
         &--right
             right: 0
-            background: $red
             color: white
     &__image
         width: 100%
@@ -611,7 +596,6 @@ h1, h2, h3, h4
         position: relative
         width: 100%
         height: 10/4*$atom
-        background: linear-gradient(-45deg, $red*.3, $red*.5, $red*1.2)
         border-radius: 500px
         margin-bottom: $offset
         @media ($big)
@@ -642,13 +626,13 @@ h1, h2, h3, h4
         font-size: 22px
         font-family: helveticaneuecyr-bold
         color: $grey
-        border-bottom: 2px solid $red
+        border-bottom-width: 2px
+        border-bottom-style: solid
         padding: .3em 0
         @media ($small)
             width: 100%
     &__job
         font-size: 16px
-        color: $red
         padding-top: .5em
         padding-bottom: 20px
     &__text
@@ -666,14 +650,13 @@ h1, h2, h3, h4
         align-items: center
         flex-basis: 17%
         height: 30px
-        border: 1px solid $red
+        border-width: 1px
+        border-style: solid
         cursor: pointer
-        &:hover
-            background: $red
     &__button
         display: flex
-        border: 1px solid $red
-        background: $red
+        border-width: 1px
+        border-style: solid
         color: white
         justify-content: center
         align-items: center
@@ -682,7 +665,6 @@ h1, h2, h3, h4
         cursor: pointer
         &:hover
             background: white
-            color: $red
     &__document-img
         width: 100%
         opacity: .5
@@ -695,11 +677,11 @@ h1, h2, h3, h4
         color: $dark_grey
         padding: 10px 0
         margin: 10px 0
-        border-bottom: 2px solid $red
+        border-bottom-width: 2px
+        border-bottom-style: solid
     &__date
         padding-top: 20px
         font-size: 14px
-        color: $red
 //  </ячейка>
 //</глобальные_блоки>
 //<блоки_главной>
@@ -715,7 +697,6 @@ h1, h2, h3, h4
         width: 100%
         flex-basis: 100vw
     &:hover
-        background: rgba($red, .8)
         .card__block
             .block__header, .block__text
                 color: white
@@ -792,14 +773,12 @@ h1, h2, h3, h4
             margin-top: 8px
             margin-right: 20px
             margin-left: -20px
-            background: $red
             content: ""
             transform: rotate(45deg)
         &::after
             display: block
             height: 2px
             margin-top: -2px
-            background: $red
             content: ""
             transform: rotate(-45deg)
     &__page_number
@@ -808,7 +787,6 @@ h1, h2, h3, h4
         color: $grey
         font-family: helveticaneuecyr-bold
         &--active
-            color: $red
             font-size: 21px
             margin-top: 10px
 //</кнопки_слайдера>

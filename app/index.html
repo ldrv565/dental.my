@@ -10,18 +10,47 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/script.js"></script>
     <title>Главная</title>
+    <style>
+        .firm_color,
+        .firm_color--hover:hover {
+            color: rgb(195, 64, 44);
+        }
+        
+        .background_firm_color,
+        .background_firm_color--hover:hover,
+        .background_firm_color--before_after::before,
+        .background_firm_color--before_after::after,
+        .link:hover .link__name--border,
+        .page-nav__item:hover .item-icon__wrap-image {
+            background: rgb(195, 64, 44);
+        }
+        
+        .background_firm_color--hover--rgba:hover {
+            background: rgba(195, 64, 44, .8);
+        }
+        
+        .background_firm_color--gradient {
+            background: linear-gradient(-45deg, black, rgb(195, 64, 44));
+        }
+        
+        .border_firm_color,
+        .border_firm_color--hover:hover,
+        .page-nav__item:hover .item-icon {
+            border-color: rgb(195, 64, 44);
+        }
+    </style>
 </head>
 
 <body style="background-image: url('images/bg.jpg')">
     <div class="header header--absolute ">
         <a href="index.html" class="logo header--absolute__logo ">
-            <h1 class="logo__element1 ">Dental</h1><span class="logo__element2 ">clinic</span>
+            <h1 class="logo__element1 firm_color ">Dental</h1><span class="logo__element2 ">clinic</span>
         </a>
         <div class="menu-button ">
             <span class="menu-button__text ">
                 Меню
             </span>
-            <div class="menu-button__icon ">
+            <div class="menu-button__icon background_firm_color">
                 <div class="menu-button__icon__sticks ">
 
                 </div>
@@ -30,7 +59,7 @@
     </div>
     <!--меню-->
     <div class="menu" style="background-image: url('images/bg1.jpg')">
-        <span class="menu__header ">
+        <span class="menu__header firm_color">
             Меню
         </span>
         <div class="list ">
@@ -55,22 +84,22 @@
                 </a>
                 <div class="list list--right ">
                     <a href="index.html" class="link list--right__link ">
-                        <span class="link__section ">Раздел 1</span>
+                        <span class="link__section firm_color--hover ">Раздел 1</span>
                     </a>
                     <a href="index.html" class="link list--right__link ">
-                        <span class="link__section ">Раздел 1</span>
+                        <span class="link__section firm_color--hover ">Раздел 1</span>
                     </a>
                     <a href="index.html" class="link list--right__link ">
-                        <span class="link__section ">Раздел 1</span>
+                        <span class="link__section firm_color--hover ">Раздел 1</span>
                     </a>
                     <a href="index.html" class="link list--right__link ">
-                        <span class="link__section ">Раздел 1</span>
+                        <span class="link__section firm_color--hover ">Раздел 1</span>
                     </a>
                     <a href="index.html" class="link list--right__link ">
-                        <span class="link__section ">Раздел 1</span>
+                        <span class="link__section firm_color--hover ">Раздел 1</span>
                     </a>
                     <a href="index.html" class="link list--right__link ">
-                        <span class="link__section ">Раздел 1</span>
+                        <span class="link__section firm_color--hover ">Раздел 1</span>
                     </a>
                 </div>
             </div>
@@ -93,24 +122,24 @@
         <div class="menu__border ">
         </div>
         <div class="social menu__social ">
-            <a href="index.html" class="social__item ">
+            <a href="index.html" class="social__item border_firm_color ">
                 <img src="./images/vk.png" alt="vk">
             </a>
-            <a href="index.html" class="social__item ">
+            <a href="index.html" class="social__item border_firm_color ">
                 <img src="./images/insta.png" alt="instagram">
             </a>
-            <a href="index.html" class="social__item ">
+            <a href="index.html" class="social__item border_firm_color ">
                 <img src="./images/fb.png" alt="facebook">
             </a>
         </div>
     </div>
     <!--/меню-->
     <div class="main main--shift ">
-        <a href="index.html" class="card">
+        <a href="index.html" class="card background_firm_color--hover--rgba">
             <div class="block card__block ">
                 <span class="block__header ">
                     Скидка<br> 10%
-                    <span class="block__header block__header--border ">
+                    <span class="block__header block__header--border background_firm_color ">
                         10%
                     </span>
                 </span>
@@ -122,12 +151,12 @@
                 </span>
             </div>
         </a>
-        <a href="index.html" class="card ">
+        <a href="index.html" class="card background_firm_color--hover--rgba">
             <div class="block card__block ">
                 <span class="block__header ">
                     Безупречная<br>
                     улыбка
-                    <span class="block__header block__header--border ">
+                    <span class="block__header block__header--border background_firm_color ">
                         улыбка
                     </span>
                 </span>
@@ -140,12 +169,12 @@
                 </span>
             </div>
         </a>
-        <a href="index.html" class="card ">
+        <a href="index.html" class="card background_firm_color--hover--rgba">
             <div class="block card__block ">
                 <span class="block__header ">
                     Стань самым<br>
                     ярким
-                    <span class="block__header block__header--border ">
+                    <span class="block__header block__header--border background_firm_color ">
                         ярким
                     </span>
                 </span>
@@ -157,12 +186,12 @@
                 </span>
             </div>
         </a>
-        <a href="index.html" class="card ">
+        <a href="index.html" class="card background_firm_color--hover--rgba">
             <div class="block card__block ">
                 <span class="block__header ">
                     Лечение зубов<br>
                     в марте -15%
-                    <span class="block__header block__header--border ">
+                    <span class="block__header block__header--border background_firm_color ">
                         в марте -15%
                     </span>
                 </span>

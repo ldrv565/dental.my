@@ -96,13 +96,13 @@ h4 {
 }
 
 .page-nav__item:hover .item-icon {
-    border: 2px solid #c3402c;
+    border-width: 2px;
+    border-style: solid;
     border-radius: 100px;
 }
 
 .page-nav__item:hover .item-icon__wrap-image {
     border-color: white;
-    background: #c3402c;
 }
 
 .page-nav__item:hover .item-icon__image {
@@ -129,7 +129,8 @@ h4 {
     width: 50px;
     height: 50px;
     border-radius: 50px;
-    border: 1px solid #c3402c;
+    border-width: 1px;
+    border-style: solid;
     box-sizing: border-box;
     padding: 25%;
 }
@@ -168,7 +169,6 @@ h4 {
     flex-basis: 100%;
     font-size: 48px;
     padding: 1vw;
-    color: #c3402c;
 }
 
 @media (max-width: 1100px) {
@@ -240,10 +240,6 @@ h4 {
     }
 }
 
-.link:hover .link__name--border {
-    background: #c3402c;
-}
-
 .link:hover .list--right {
     display: block;
 }
@@ -300,10 +296,6 @@ h4 {
     }
 }
 
-.link__section:hover {
-    color: #c3402c;
-}
-
 .social {
     flex-basis: 100%;
     display: flex;
@@ -314,7 +306,8 @@ h4 {
     margin: 1vw;
     height: 60px;
     width: 60px;
-    border: 1px solid #c3402c;
+    border-width: 1px;
+    border-style: solid;
     align-items: center;
     justify-content: center;
 }
@@ -386,7 +379,6 @@ h4 {
 
 .logo__element1 {
     display: inline;
-    color: #c3402c;
     font-family: helveticaneuecyr-bold;
     font-size: 24px;
 }
@@ -418,7 +410,6 @@ h4 {
 }
 
 .menu-button__icon {
-    background: #c3402c;
     width: 50px;
     height: 45px;
 }
@@ -450,7 +441,7 @@ h4 {
 }
 
 .menu-button__icon--closing {
-    background: transparent;
+    background: transparent !important;
 }
 
 .menu-button__icon--closing .menu-button__icon__sticks {
@@ -517,7 +508,6 @@ h4 {
     height: .4em;
     display: inline;
     color: transparent;
-    background: #c3402c;
 }
 
 .block__header {
@@ -546,7 +536,6 @@ h4 {
     display: inline;
     color: transparent;
     height: 11px;
-    background: #c3402c;
 }
 
 .block__text {
@@ -592,8 +581,8 @@ h4 {
 
 .block__button {
     display: flex;
-    border: 1px solid #c3402c;
-    color: #c3402c;
+    border-width: 1px;
+    border-style: solid;
     justify-content: center;
     align-items: center;
     font-size: 14px;
@@ -617,19 +606,16 @@ h4 {
 }
 
 .block__button:hover {
-    background: #c3402c;
     color: white;
 }
 
 .block__button--inversed {
     color: white;
-    background: #c3402c;
     font-family: helveticaneuecyr-bold;
 }
 
 .block__button--inversed:hover {
     background: white;
-    color: #c3402c;
 }
 
 .block__numeric-icon {
@@ -637,7 +623,6 @@ h4 {
     width: 0;
     height: 0;
     padding: 25px 25px;
-    background: #c3402c;
     border-radius: 100px;
     box-sizing: border-box;
 }
@@ -725,7 +710,6 @@ h4 {
 .preview__block--contacts__header {
     display: block;
     font-size: 16px;
-    color: #c3402c;
 }
 
 .preview__block--contacts__text {
@@ -797,8 +781,10 @@ h4 {
 
 .image-block--map {
     flex-basis: 60%;
-    border-left: 0.6vw solid #c3402c;
-    border-top: 0.6vw solid #c3402c;
+    border-left-width: 0.6vw;
+    border-left-style: solid;
+    border-top-width: 0.6vw;
+    border-top-style: solid;
     height: min-content;
 }
 
@@ -813,7 +799,6 @@ h4 {
     left: -50px;
     bottom: 70px;
     font-size: 32px;
-    background: #c3402c;
     font-family: helveticaneuecyr-bold;
     color: white;
     padding: 10px 30px;
@@ -896,7 +881,6 @@ h4 {
 
 .image-block__label--right {
     right: 0;
-    background: #c3402c;
     color: white;
 }
 
@@ -932,7 +916,6 @@ h4 {
     position: relative;
     width: 100%;
     height: 10vw;
-    background: linear-gradient(-45deg, #3b130d, #622016, #ea4d35);
     border-radius: 500px;
     margin-bottom: 1vw;
 }
@@ -985,7 +968,8 @@ h4 {
     font-size: 22px;
     font-family: helveticaneuecyr-bold;
     color: #4f4f4f;
-    border-bottom: 2px solid #c3402c;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
     padding: .3em 0;
 }
 
@@ -997,7 +981,6 @@ h4 {
 
 .cell__job {
     font-size: 16px;
-    color: #c3402c;
     padding-top: .5em;
     padding-bottom: 20px;
 }
@@ -1021,18 +1004,15 @@ h4 {
     align-items: center;
     flex-basis: 17%;
     height: 30px;
-    border: 1px solid #c3402c;
+    border-width: 1px;
+    border-style: solid;
     cursor: pointer;
-}
-
-.cell__info-button:hover {
-    background: #c3402c;
 }
 
 .cell__button {
     display: flex;
-    border: 1px solid #c3402c;
-    background: #c3402c;
+    border-width: 1px;
+    border-style: solid;
     color: white;
     justify-content: center;
     align-items: center;
@@ -1043,7 +1023,6 @@ h4 {
 
 .cell__button:hover {
     background: white;
-    color: #c3402c;
 }
 
 .cell__document-img {
@@ -1062,13 +1041,13 @@ h4 {
     color: #3e3e3e;
     padding: 10px 0;
     margin: 10px 0;
-    border-bottom: 2px solid #c3402c;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
 }
 
 .cell__date {
     padding-top: 20px;
     font-size: 14px;
-    color: #c3402c;
 }
 
 .card {
@@ -1086,10 +1065,6 @@ h4 {
         width: 100%;
         flex-basis: 100vw;
     }
-}
-
-.card:hover {
-    background: rgba(195, 64, 44, 0.8);
 }
 
 .card:hover .card__block .block__header,
@@ -1198,7 +1173,6 @@ h4 {
     margin-top: 8px;
     margin-right: 20px;
     margin-left: -20px;
-    background: #c3402c;
     content: "";
     transform: rotate(45deg);
 }
@@ -1207,7 +1181,6 @@ h4 {
     display: block;
     height: 2px;
     margin-top: -2px;
-    background: #c3402c;
     content: "";
     transform: rotate(-45deg);
 }
@@ -1220,7 +1193,6 @@ h4 {
 }
 
 .slider_buttons__page_number--active {
-    color: #c3402c;
     font-size: 21px;
     margin-top: 10px;
 }
