@@ -695,8 +695,22 @@ h1, h2, h3, h4
         cursor: pointer
         &:hover
             background: white
-    &__document-img
+    &__document-wrapper
         width: 100%
+        height: $atom * 3.5
+        overflow: hidden
+        position: relative
+        @media($big)
+            height: $atom * 7
+        @media($medium)
+            height: $atom * 12
+    &__document-img
+        position: absolute
+        height: 100%
+        left: -50%
+        right: -50%
+        width: auto
+        margin: auto
         opacity: .5
         cursor: pointer
         &:hover
@@ -753,6 +767,7 @@ h1, h2, h3, h4
     position: relative
     display: block
     width: 100%
+    background: white
     &__nikalka
         position: absolute
         left: 0
@@ -768,14 +783,35 @@ h1, h2, h3, h4
     overflow-x: auto
     z-index: 0
     &__element
+        display: flex
+        flex-wrap: wrap
         min-width: 15*$atom
         padding: 0 2px
         margin: 0
         margin-bottom: 15px
+        height: 100%
         @media ($big)
             min-width: 20*$atom
         @media ($medium)
             min-width: 23*$atom
+        .image-block--half
+            height: 11.15vw
+            overflow: hidden
+            @media($big)
+                height: 15vw
+            @media($medium)
+                height: 35vw
+            .image-block__image
+                width: auto
+                height: 100%
+        &--last
+            min-width: 7.5 * $atom
+            @media ($big)
+                min-width: 10*$atom
+            @media ($medium)
+                min-width: 23*$atom
+            .preview--half
+                flex-basis: 100%
 //</слайдер>
 //<кнопки_слайдера>
 .slider_buttons
@@ -874,3 +910,13 @@ h1, h2, h3, h4
                 
 ///иконка закрытия
 ///модалка
+
+.creator
+    position: absolute
+    right: 0
+    left: 0
+    font-size: 12px
+    width: 30%
+    margin: auto
+    text-align: center
+    color: $light_grey

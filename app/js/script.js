@@ -1,5 +1,6 @@
 $("document").ready(function() {
 	menuButtonToggle();
+	slider();
 	modalToggle();
 })
 
@@ -27,7 +28,14 @@ function menuButtonToggle() {
 function slider() {
 	let scrollLeftButton = $(".slider_buttons__arrow--left");
 	let scrollRightButton = $(".slider_buttons__arrow--right");
-	let firstLeftValue = $($(".slider__element")[0]).offset().left;
+	let firstLeftValue = $(".slider__element:eq(0)").offset().left;
+	let sliderLength = $(".slider__element").length - 1;
+	let lastSliderElement = $(".slider__element:eq(" + sliderLength + ")");
+
+	if(lastSliderElement.children().length == 1) {
+		lastSliderElement.addClass("slider__element--last")
+	}
+
 	scrollLeftButton.click(function() {
 		scroll("left", firstLeftValue);
 		changeNumber("left");

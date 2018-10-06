@@ -1073,8 +1073,32 @@ h4 {
     background: white;
 }
 
-.cell__document-img {
+.cell__document-wrapper {
     width: 100%;
+    height: 14vw;
+    overflow: hidden;
+    position: relative;
+}
+
+@media (max-width: 1100px) {
+    .cell__document-wrapper {
+        height: 28vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .cell__document-wrapper {
+        height: 48vw;
+    }
+}
+
+.cell__document-img {
+    position: absolute;
+    height: 100%;
+    left: -50%;
+    right: -50%;
+    width: auto;
+    margin: auto;
     opacity: .5;
     cursor: pointer;
 }
@@ -1149,6 +1173,7 @@ h4 {
     position: relative;
     display: block;
     width: 100%;
+    background: white;
 }
 
 .slider-wrap__nikalka {
@@ -1170,10 +1195,13 @@ h4 {
 }
 
 .slider__element {
+    display: flex;
+    flex-wrap: wrap;
     min-width: 60vw;
     padding: 0 2px;
     margin: 0;
     margin-bottom: 15px;
+    height: 100%;
 }
 
 @media (max-width: 1100px) {
@@ -1186,6 +1214,48 @@ h4 {
     .slider__element {
         min-width: 92vw;
     }
+}
+
+.slider__element .image-block--half {
+    height: 11.15vw;
+    overflow: hidden;
+}
+
+@media (max-width: 1100px) {
+    .slider__element .image-block--half {
+        height: 15vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider__element .image-block--half {
+        height: 35vw;
+    }
+}
+
+.slider__element .image-block--half .image-block__image {
+    width: auto;
+    height: 100%;
+}
+
+.slider__element--last {
+    min-width: 30vw;
+}
+
+@media (max-width: 1100px) {
+    .slider__element--last {
+        min-width: 40vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider__element--last {
+        min-width: 92vw;
+    }
+}
+
+.slider__element--last .preview--half {
+    flex-basis: 100%;
 }
 
 .slider_buttons {
@@ -1310,4 +1380,15 @@ h4 {
 .modal__icon__sticks::after {
     margin-top: -2px;
     transform: rotate(-45deg);
+}
+
+.creator {
+    position: absolute;
+    right: 0;
+    left: 0;
+    font-size: 12px;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    color: #a4a4a4;
 }
