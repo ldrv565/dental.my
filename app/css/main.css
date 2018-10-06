@@ -54,16 +54,22 @@ h4 {
 }
 
 .header__page-title {
+    position: absolute;
+    padding-top: 15px;
+    top: 1vw;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 33vw;
     font-size: 21px;
-    margin-left: -25px;
     font-family: helveticaneuecyr-bold;
     color: #4f4f4f;
+    text-align: center;
 }
 
 @media (max-width: 480px) {
     .header__page-title {
-        font-size: 13px;
-        margin-left: 0px;
+        font-size: 12px;
     }
 }
 
@@ -336,6 +342,7 @@ h4 {
 }
 
 .main--grid2 {
+    position: relative;
     margin: 0 20vw;
     margin-bottom: 4vw;
     width: 60vw;
@@ -657,6 +664,30 @@ h4 {
     .block__numeric-icon .block__header {
         padding-top: 7px;
         padding-left: 7px;
+    }
+}
+
+.block--price {
+    position: absolute;
+    right: 0;
+    top: 6vw;
+    width: auto;
+}
+
+.block--price .block__header {
+    border-bottom-width: .1em;
+    border-bottom-style: solid;
+}
+
+@media (max-width: 1800px) {
+    .block--price .block__header {
+        top: -6vw;
+    }
+}
+
+@media (max-width: 1100px) {
+    .block--price .block__header {
+        font-size: 16px;
     }
 }
 
@@ -1213,4 +1244,70 @@ h4 {
 .slider_buttons__page_number--active {
     font-size: 21px;
     margin-top: 25px;
+}
+
+.modal {
+    position: fixed;
+    display: none;
+    width: 600px;
+    height: 250px;
+    background: white;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .modal {
+        width: 300px;
+        height: 240px;
+        padding: 30px 10px;
+    }
+}
+
+.modal--opened {
+    display: block;
+}
+
+.modal__row_name {
+    display: block;
+    padding: 10px 0;
+    font-size: 12px;
+}
+
+.modal__row_input {
+    display: block;
+    font-size: 12px;
+    width: 100%;
+}
+
+.modal__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 15px;
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+.modal__icon__sticks::before,
+.modal__icon__sticks::after {
+    display: block;
+    content: "";
+    height: 2px;
+    background: #4f4f4f;
+}
+
+.modal__icon__sticks::before {
+    transform: rotate(45deg);
+}
+
+.modal__icon__sticks::after {
+    margin-top: -2px;
+    transform: rotate(-45deg);
 }

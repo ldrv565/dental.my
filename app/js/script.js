@@ -1,6 +1,6 @@
 $("document").ready(function() {
 	menuButtonToggle();
-	slider();
+	modalToggle();
 })
 
 function menuButtonToggle() {
@@ -57,4 +57,17 @@ function changeNumber(direction) {
 		$($(".slider_buttons__page_number")[count - 1]).toggleClass("slider_buttons__page_number--active firm_color");
 		$($(".slider_buttons__page_number")[count - 1 - direction]).toggleClass("slider_buttons__page_number--active firm_color")
 	}
+}
+
+function modalToggle() {
+	let modal = $(".modal");
+	let openButton = $(".open_button");
+	let closeButton = $(".modal__icon");
+
+	openButton.click(function() {
+		modal.toggleClass("modal--opened");
+	})
+	closeButton.click(function() {
+		modal.toggleClass("modal--opened");
+	})
 }
